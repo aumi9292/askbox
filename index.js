@@ -57,11 +57,11 @@ function addToOrRetrieveCache(req, res) {
 }
 
 app.get("/", (req, res) => {
-  const host = 'https://www.aumi.dev/r/';
+  const host = 'http://localhost/';
   const path = generatePath();
   const link = host + path;
 
-  const urlNotification = `Here's your sick webhook endpoint URL: ${link}\n`;
+  const urlNotification = `Here's your webhook endpoint URL: ${link}\n`;
   const instructions = `To see requests made to your endpoint, go to ${link}?inspect=true\n`;
   res.send(urlNotification + instructions);
 });
